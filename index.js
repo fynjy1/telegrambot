@@ -2,7 +2,7 @@ process.env.NTBA_FIX_319 = 1;
 
 var TelegramBot = require('node-telegram-bot-api');
 
-var token = '649209171:AAE9o3Q1bW5J2bSrplAjuSFUi6vwP6Wsqac';
+var token = '692771133:AAGxb0IPAaoW5mHEtXcdffqWEOH3uy1cyG8';
 
 var bot = new TelegramBot(token, {
 	polling: true,
@@ -10,7 +10,7 @@ var bot = new TelegramBot(token, {
 
 var notes = [];
 
-	bot.onText(/\/напомни (.+) в (.+)/, function (msg, match) {
+	bot.onText(/[нН]апомни (.+) в (.+)/, function (msg, match) {
 	  var userId = msg.from.id;
 	  var text = match[1];
 	  var time = match[2];
